@@ -18,7 +18,9 @@ While chrony was running, the data has been collected with
 Remarks:
 
 ```AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)```
+
 ```AS1-3: cycles counter 2900000000```
+
 ```AS4 :  cycles counter 3502655000```
 
 
