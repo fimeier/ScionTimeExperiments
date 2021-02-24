@@ -5,11 +5,13 @@
 ## xleave
 
 
-## cpu load (3h)
+## LONG RUN 
+
+## cpu load (6h)
 2nd run... now I started chrony and then the load (compare clock precision experiment NTP)
 
-Vom Anfang an bis ca  (UTC ): stress -v --cpu 8 --io 8 -t 10800
-
+Ab 09:15 (UTC 8:15) bis ca 15:15 (UTC 14:15): stress -v --cpu 8 --io 8 -t 21600
+Experiment Ende 21:15
 
 
 

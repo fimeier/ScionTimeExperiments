@@ -8,8 +8,8 @@
 ## cpu load (3h)
 2nd run... now I started chrony and then the load (compare clock precision experiment NTP)
 
-Vom Anfang an bis ca  (UTC ): stress -v --cpu 8 --io 8 -t 10800
-
+Anfang 15:45 an bis ca 18:45  (UTC 17:45): stress -v --cpu 8 --io 8 -t 10800
+ENDE 21:45
 
 
 
