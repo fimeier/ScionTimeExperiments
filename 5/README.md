@@ -26,3 +26,12 @@ AS4 :  cycles counter 3502655000
 
 ## Kommentare
 Habe Daten im Excel zusammengefasst
+
+## Example Plot
+![Alt text](5/Experiment5.svg?raw=true "Optional Title")
+
+![Alt text](5/Experiment5_Final.svg?raw=true "Optional Title")
+
+![Alt text](5/Experiment5Details.svg?raw=true "Optional Title")
+
+![Alt text](5/Experiment5Details2.svg?raw=true "Optional Title")
