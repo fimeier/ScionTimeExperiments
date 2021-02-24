@@ -8,7 +8,7 @@
 |  2 |   GNSS setsystime  |  -  |    -   |  -  |    -    |
 |  3 |   GNSS SHM driver  |  -  |    -   |  -  |    -    |
 |  4 |        Scion       | yes |   yes  |  no |    no   |
-|  [5](5/Experiment5.svg?raw=true) |         UDP        | yes |   yes  |  no |    no   |
+|  [Experiment 5](5) |         UDP        | yes |   yes  |  no |    no   |
 |  6 |         UDP        |  no |   yes  | yes |    no   |
 |  7 |         UDP        |  no |   no   | yes |    no   |
 |  8 |        Scion       |  no |   no   | yes |    no   |
