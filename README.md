@@ -30,7 +30,7 @@
 | 24 |                    |     |        |     |         |
 
 
-```The experiment folders contain detailed descriptions about the individual experiments.```
+The experiment folders contain detailed descriptions about the individual experiments.
 
-```The provided plots are given in the SVG format. The overflow="scroll" option is set. This allows graphical analysis of the plots without any technical helpers, and this with perfect resolution, even for plots with 100-thousend of data points.```
+The provided plots are given in the SVG format. SVG's ```overflow="scroll"``` option is set. This allows graphical analysis of the plots, without any technical helpers, and this with perfect resolution, even for plots with 100-thousend of data points.
 
