@@ -30,8 +30,8 @@ Remarks:
 
 ![Alt text](Experiment5.svg?raw=true "Optional Title")
 
-![Alt text](Experiment5_Final.svg?raw=true "Optional Title")
+![Alt text](Experiment5_Final.svg?raw=true "Complete Experiment")
 
-![Alt text](Experiment5Details.svg?raw=true "Optional Title")
+![Alt text](Experiment5Details.svg?raw=true "Details 1")
 
-![Alt text](Experiment5Details2.svg?raw=true "Optional Title")
+![Alt text](Experiment5Details2.svg?raw=true "Details 2")
