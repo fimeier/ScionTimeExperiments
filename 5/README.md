@@ -9,7 +9,9 @@
 
 ## Data collection
 While chrony was running, the data has been collected with
-```sudo mbgsvcd -f```
+```sudo mbgsvcd -f```,i.e., each system uses its GNSS receiver to measure the clock skew.
+
+The GNSS receiver is a [Meinberg GNS181PEX](https://www.meinbergglobal.com/english/products/pci-express-gps-glonass-galileo-beidou-clock.htm) configured to use GPS + Galileo + GLONASS as source.
 
 ## Topology
 
