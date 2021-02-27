@@ -7,6 +7,16 @@
 ```xleave enabled```
 
 
+```24h run```
+
+10:00 - 10:00
+
+cat AS1.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS1short.txt
+cat AS2.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS2short.txt
+cat AS3.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS3short.txt
+cat AS4.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS4short.txt
+
+
 ## Data collection
 While chrony was running, the data has been collected with
 ```sudo mbgsvcd -f```,i.e., each system uses its GNSS receiver to measure the clock skew.

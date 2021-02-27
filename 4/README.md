@@ -4,6 +4,10 @@
 
 ## xleave enabled
 
+## 24h run
+
+10:00 - 10:00
+
 
 ## Data collection
 On all ASs do the following WHILE chrony is synchronizing time as defined in the Setting below
