@@ -6,30 +6,27 @@ Please wait until 5.3., before considering data published here.
 
 |    |        Mode        |  Hw | xleave | CPU | Network |
 |:--:|:------------------:|:---:|:------:|:---:|:-------:|
-|  1 | TM2000A (GNSS box) |  -  |    -   |  -  |    -    |
-|  2 |   GNSS setsystime  |  -  |    -   |  -  |    -    |
-|  3 |   GNSS SHM driver  |  -  |    -   |  -  |    -    |
-|  4 |        Scion       | yes |   yes  |  no |    no   |
+|  [Experiment 2](2) |  GNSS setsystime|    |    |       |   |       |
+|  [Experiment 3](3) |  GNSS SHM driver  |    |       |    |        |
+|  [Experiment 4](4) |        Scion       | yes |   yes  |  no |    no   |
 |  [Experiment 5](5) |         UDP        | yes |   yes  |  no |    no   |
-|  6 |         UDP        |  no |   yes  | yes |    no   |
-|  7 |         UDP        |  no |   no   | yes |    no   |
-|  8 |        Scion       |  no |   no   | yes |    no   |
-|  9 |        Scion       |  no |   yes  | yes |    no   |
-| 10 |        Scion       |  no |   yes  |  no |   yes   |
-| 11 |        Scion       |  no |   no   |  no |   yes   |
-| 12 |        Scion       | yes |   yes  |  no |   yes   |
-| 13 |        Scion       | yes |   yes  | yes |    no   |
-| 14 |         UDP        | yes |   yes  | yes |    no   |
-| 15 |         UDP        | yes |   yes  |  no |   yes   |
-| 16 |         UDP        | yes |   no   |  no |   yes   |
-| 17 |         UDP        |  no |   yes  |  no |   yes   |
-| 18 |         UDP        |  no |   no   |  no |   yes   |
-| 19 |        Scion       | yes |   no   |  no |   yes   |
-| 20 |        Scion       | yes |   no   | yes |    no   |
-| 21 |         UDP        | yes |   no   | yes |    no   |
-| [Experiment 30](30) | NTP worldwide      |  -  |    -   |  -  |    -    |
-| 23 |                    |     |        |     |         |
-| 24 |                    |     |        |     |         |
+|  [Experiment 6](6) |         UDP        |  no |   yes  | yes |    no   |
+|  [Experiment 7](7) |         UDP        |  no |   no   | yes |    no   |
+|  [Experiment 8](8) |        Scion       |  no |   no   | yes |    no   |
+|  [Experiment 9](9) |        Scion       |  no |   yes  | yes |    no   |
+| [Experiment 10](10) |        Scion       |  no |   yes  |  no |   yes   |
+| [Experiment 11](11) |        Scion       |  no |   no   |  no |   yes   |
+| [Experiment 12](12) |        Scion       | yes |   yes  |  no |   yes   |
+| [Experiment 13](13) |        Scion       | yes |   yes  | yes |    no   |
+| [Experiment 14](14) |         UDP        | yes |   yes  | yes |    no   |
+| [Experiment 15](15) |         UDP        | yes |   yes  |  no |   yes   |
+| [Experiment 16](16) |         UDP        | yes |   no   |  no |   yes   |
+| [Experiment 17](17) |         UDP        |  no |   yes  |  no |   yes   |
+| [Experiment 18](18) |         UDP        |  no |   no   |  no |   yes   |
+| [Experiment 19](19) |        Scion       | yes |   no   |  no |   yes   |
+| [Experiment 20](20) |        Scion       | yes |   no   | yes |    no   |
+| [Experiment 21](21) |         UDP        | yes |   no   | yes |    no   |
+| [Experiment 30](30) |     NTP worldwide  |    |       |    |       |
 
 
 The experiment folders contain detailed descriptions about the individual experiments.

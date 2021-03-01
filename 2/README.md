@@ -1,25 +1,45 @@
+## Experiment Setting
+```special experiment```
+
 ## Data collection
-On all ASs do the following WHILE the script listed in Settings is running
-* sudo mbgsvcd -f > AS1.txt
-* cat AS1.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS1short.txt
+While chrony was running, the data has been collected with
+```sudo mbgsvcd -f```,i.e., each system uses its GNSS receiver to measure the clock skew. [mbgsvcd()](https://kb.meinbergglobal.com/kb/driver_software/command_line_tools_mbgtools#mbgsvcd) is the Meinberg Service Daemon, implementing the Shared Memory Driver (SHM).
 
-## Setting
-runExp2.bash, i.e., "sudo mbgsetsystime > /dev/null"
-
-Remark:
-AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)
+The GNSS receiver is a [Meinberg GNS181PEX](https://www.meinbergglobal.com/english/products/pci-express-gps-glonass-galileo-beidou-clock.htm) configured to use GPS + Galileo + GLONASS as source.
 
 
+## Topology
 
-## Kommentare
-Habe Daten im Excel zusammengefasst
-Vermutlich sollte ich die Messung wiederholen nachdem Clock discipliniert wurde (für stability), sollte aber nichts gross ändern
+```AS1<-mbgsetsystime(GNS181PEX)```
 
-Zudem sollte ich schauen wie es sich verhält wenn man die Zeit mit der Meinbergkarte über Chrony setzt (über den Memory Driver).
+```AS1<-mbgsetsystime(GNS181PEX)```
 
-Dieses Experiment hier sollte eigentlich zeigen wie exakt die Meinbergkarte Zeitunterschiede feststellen kann und sie auch setzen tut.
+```AS1<-mbgsetsystime(GNS181PEX)```
 
-Es ist klar, dass die Uhr so nicht diszipliniert wird, was aber eigentlich egal ist, da ich sie alle 100ms neu setze und den Offset jede Sekunde auslese.
+```AS1<-mbgsetsystime(GNS181PEX)```
 
-Eine Erklärung für den konstanten positiven Offset von 35microSec könnte sein, dass mbgsetsystime nicht auf Genauigkeit optimiert ist wie mbgsvcd.
+
+Remarks:
+
+[mbgsetsystime()](https://kb.meinbergglobal.com/kb/driver_software/command_line_tools_mbgtools#mbgsetsystime) ```has been used to set the system time each second to the time provided by the PCIExpress card GNS181PEX```
+
+```AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)```
+
+```AS1-3: cycles counter 2900000000```
+
+```AS4 :  cycles counter 3502655000```
+
+## Comments
+mbgsetsystime() is not accurate. An offset of 35microSeconds is caused by offset errors due to interrupt latencies and processing times. Compare experiment 3: The SHM-driver achieves much better results.
+
+
+## Example Plots
+```Click on the plots below, or download them. You have to view them in raw mode.```
+
+```Hint: You can zoom and scroll```
+
+
+![Alt text](Experiment2.svg?raw=true "Complete Experiment")
+
+![Alt text](Experiment2Details.svg?raw=true "Details")
 

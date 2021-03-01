@@ -1,31 +1,44 @@
-## SCION SETTING!!!!!!!!!!!
+## Experiment Setting
+```SCION mode```
 
-## HW/Kernel Timestamps enabled
+```HW/Kernel Timestamps enabled```
 
-## xleave enabled
 
-## 24h run
+```xleave enabled```
 
-10:00 - 10:00
+
+```24h run```
+
 
 
 ## Data collection
-On all ASs do the following WHILE chrony is synchronizing time as defined in the Setting below
-* sudo mbgsvcd -f > AS1.txt
-cat AS1.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS1short.txt
-cat AS2.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS2short.txt
-cat AS3.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS3short.txt
-cat AS4.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS4short.txt
+While chrony was running, the data has been collected with
+```sudo mbgsvcd -f```,i.e., each system uses its GNSS receiver to measure the clock skew. [mbgsvcd()](https://kb.meinbergglobal.com/kb/driver_software/command_line_tools_mbgtools#mbgsvcd) is the Meinberg Service Daemon, implementing the Shared Memory Driver (SHM).
 
-## Setting
-SHM(AS1,Meinberg) <- AS2 <- AS3 <- AS4
+The GNSS receiver is a [Meinberg GNS181PEX](https://www.meinbergglobal.com/english/products/pci-express-gps-glonass-galileo-beidou-clock.htm) configured to use GPS + Galileo + GLONASS as source.
 
-Remark:
-AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)
+## Topology
 
-AS1-3: cycles counter 2900000000
-AS4 :  cycles counter 3502655000
+```SHM(AS1,Meinberg) <- AS2 <- AS3 <- AS4```
+
+Remarks:
+
+```AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)```
+
+```AS1-3: cycles counter 2900000000```
+
+```AS4 :  cycles counter 3502655000```
 
 
-## Kommentare
-Habe Daten im Excel zusammengefasst
+## Example Plots
+```Click on the plots below, or download them. You have to view them in raw mode.```
+
+```Hint: You can zoom and scroll```
+
+
+![Alt text](Experiment4.svg?raw=true "Full Experiment")
+
+
+![Alt text](Experiment4Details.svg?raw=true "Details 1")
+
+
