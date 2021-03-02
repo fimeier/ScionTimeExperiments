@@ -1,4 +1,4 @@
-## Experiment Setting
+## Experiment 3 Setting
 ```special experiment```
 
 ## Data collection

@@ -1,4 +1,4 @@
-## Experiment Setting
+## Experiment 4 Setting
 ```SCION mode```
 
 ```HW/Kernel Timestamps enabled```
@@ -36,7 +36,7 @@ Remarks:
 ```Hint: You can zoom and scroll```
 
 
-![Alt text](Experiment4.svg?raw=true "Full Experiment")
+![Alt text](Experiment4Part.svg?raw=true "Full Experiment")
 
 
 ![Alt text](Experiment4Details.svg?raw=true "Details 1")

@@ -1,45 +1,43 @@
-## UDP SETTING!!!!!!!!!!!
+## Experiment 7 Setting
+```UDP mode```
 
-## NO HW/Kernel Timestamps
+```NO HW/Kernel Timestamps```
 
-## NO xleave enabled
+```xleave enabled```
 
 
-## cpu load (3h)
-2nd run... now I started chrony and then the load (compare clock precision experiment NTP)
+## cpu load
+```until 11:40: stress -v --cpu 8 --io 8 -t 10800```
 
-Anfang 9:40 an bis ca 12:40  (UTC 11:40): stress -v --cpu 8 --io 8 -t 10800
 
 
 
 ## Data collection
-On all ASs do the following WHILE chrony is synchronizing time as defined in the Setting below
-* sudo mbgsvcd -f > AS1.txt
-cat AS1.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS1short.txt
-cat AS2.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS2short.txt
-cat AS3.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS3short.txt
-cat AS4.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS4short.txt
+While chrony was running, the data has been collected with
+```sudo mbgsvcd -f```,i.e., each system uses its GNSS receiver to measure the clock skew. [mbgsvcd()](https://kb.meinbergglobal.com/kb/driver_software/command_line_tools_mbgtools#mbgsvcd) is the Meinberg Service Daemon, implementing the Shared Memory Driver (SHM).
 
-## Setting
-SHM(AS1,Meinberg) <- AS2 <- AS3 <- AS4
+The GNSS receiver is a [Meinberg GNS181PEX](https://www.meinbergglobal.com/english/products/pci-express-gps-glonass-galileo-beidou-clock.htm) configured to use GPS + Galileo + GLONASS as source.
 
-Remark:
-AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)
+## Topology
 
-AS1-3: cycles counter 2900000000
-AS4 :  cycles counter 3502655000
+```SHM(AS1,Meinberg) <- AS2 <- AS3 <- AS4```
 
+Remarks:
 
-## Kommentare
-Habe Daten im Excel zusammengefasst
+```AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)```
+
+```AS1-3: cycles counter 2900000000```
+
+```AS4 :  cycles counter 3502655000```
 
 
-## Conclusion
+## Example Plots
+```Click on the plots below, or download them. You have to view them in raw mode.```
 
-TODO:  habe das in der Nacht nicht mehr angeschaut
-
-Die CLients benutzen weiterhin Kernel TSs, nur der Server nicht, zumindest beim Antworten. Tut er es beim Empfangen wirklich nicht? Doch sieht so aus... wird dann aber korrigiert (Vermutung)
-Diese Tests sollten im SCION setting krasser ausfallen!!
+```Hint: You can zoom and scroll```
 
 
-CPU/IO load has not a big influence, as there is no scheduling involved once we use Kernel TS (we cannot deactivate them when using xleave)
+
+![Alt text](Experiment7.svg?raw=true "Complete Experiment")
+
+![Alt text](Experiment7Details.svg?raw=true "Details 1")

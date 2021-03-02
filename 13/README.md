@@ -1,45 +1,43 @@
-## SCION SETTING!!!!!!!!!!!
+## Experiment 13 Setting
+```SCION mode```
 
-## HW/Kernel Timestamps
+```HW/Kernel Timestamps enabled```
 
-## xleave
+```xleave enabled```
 
 
-## cpu load (4h!!!!) ACHTUNG!!!! 4h
-2nd run... now I started chrony and then the load (compare clock precision experiment NTP)
-
-Vom 21:25 (UTC 20:25) bis 00:25 (UTC 23:25): stress -v --cpu 8 --io 8 -t 14400
+## cpu load
+```until 00:25: stress -v --cpu 8 --io 8 -t 14400```
 
 
 
 
 ## Data collection
-On all ASs do the following WHILE chrony is synchronizing time as defined in the Setting below
-* sudo mbgsvcd -f > AS1.txt
-cat AS1.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS1short.txt
-cat AS2.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS2short.txt
-cat AS3.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS3short.txt
-cat AS4.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS4short.txt
+While chrony was running, the data has been collected with
+```sudo mbgsvcd -f```,i.e., each system uses its GNSS receiver to measure the clock skew. [mbgsvcd()](https://kb.meinbergglobal.com/kb/driver_software/command_line_tools_mbgtools#mbgsvcd) is the Meinberg Service Daemon, implementing the Shared Memory Driver (SHM).
 
-## Setting
-SHM(AS1,Meinberg) <- AS2 <- AS3 <- AS4
+The GNSS receiver is a [Meinberg GNS181PEX](https://www.meinbergglobal.com/english/products/pci-express-gps-glonass-galileo-beidou-clock.htm) configured to use GPS + Galileo + GLONASS as source.
 
-Remark:
-AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)
+## Topology
 
-AS1-3: cycles counter 2900000000
-AS4 :  cycles counter 3502655000
+```SHM(AS1,Meinberg) <- AS2 <- AS3 <- AS4```
+
+Remarks:
+
+```AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)```
+
+```AS1-3: cycles counter 2900000000```
+
+```AS4 :  cycles counter 3502655000```
 
 
-## Kommentare
-Scheint wieder sehr lange nachzuschwingen....
+## Example Plots
+```Click on the plots below, or download them. You have to view them in raw mode.```
 
-HABE ES WEITER LAUFEN LASSEN DA NOCH NICHT STABIL ist....
-
-Wird selbst nach 14 Stunden nicht stabil
-
+```Hint: You can zoom and scroll```
 
 
 
-## Conclusion
+![Alt text](Experiment13.svg?raw=true "Complete Experiment")
 
+![Alt text](Experiment13Details.svg?raw=true "Details 1")
