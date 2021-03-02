@@ -45,6 +45,5 @@ Remarks:
 
 ![Alt text](Experiment11.svg?raw=true "Complete Experiment")
 
-![Alt text](Experiment11Details.svg?raw=true "Details 1")
-
+![Alt text](Experiment11SecondPartwoLoad.svg?raw=true "Experiment 2nd Part without Load")
 

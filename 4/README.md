@@ -36,7 +36,10 @@ Remarks:
 ```Hint: You can zoom and scroll```
 
 
-![Alt text](Experiment4Part.svg?raw=true "Full Experiment")
+![Alt text](Experiment4FirstHalf.svg?raw=true "Full Experiment First Half")
+
+
+![Alt text](Experiment4SecondHalf.svg?raw=true "Full Experiment Second Half")
 
 
 ![Alt text](Experiment4Details.svg?raw=true "Details 1")

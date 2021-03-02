@@ -56,6 +56,6 @@ server ch.pool.ntp.org  xleave iburst
 
 ![Alt text](Experiment30.svg?raw=true "Complete Experiment")
 
-![Alt text](Experiment30Details.svg?raw=true "Zoom-In")
+![Alt text](Experiment30woKorea.svg?raw=true "Zoom-In")
 
 

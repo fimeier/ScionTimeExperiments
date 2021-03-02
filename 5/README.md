@@ -35,8 +35,14 @@ Remarks:
 ```Hint: You can zoom and scroll```
 
 
+```Experiment5FirstHalf.svg first 20 minutes are removed (outliners)```
 
-![Alt text](Experiment5_Final.svg?raw=true "Complete Experiment")
+
+![Alt text](Experiment5FirstHalf.svg?raw=true "Full Experiment First Half")
+
+
+![Alt text](Experiment5SecondHalf.svg?raw=true "Full Experiment Second Half")
+
 
 ![Alt text](Experiment5Details.svg?raw=true "Details 1")
 

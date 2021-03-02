@@ -1,6 +1,11 @@
-# experiments
+# Experiments
 
-Please wait until 5.3., before considering data published here.
+This Repository contains many experiments collected while testing [SCIONchrony](https://github.com/sciontime/chrony) in [SCION](https://github.com/sciontime/scion) and normal UDP/IP mode.
+
+
+The experiment folders contain detailed descriptions about the individual experiments.
+
+The provided plots are given in the SVG format. SVG's ```overflow="scroll"``` option is set. This allows graphical analysis of the plots, without any technical helpers, and this with perfect resolution, even for plots with 100-thousend of data points.
 
 ## Overview
 
@@ -29,7 +34,5 @@ Please wait until 5.3., before considering data published here.
 | [Experiment 30](30) |     NTP worldwide  |    |       |    |       |
 
 
-The experiment folders contain detailed descriptions about the individual experiments.
 
-The provided plots are given in the SVG format. SVG's ```overflow="scroll"``` option is set. This allows graphical analysis of the plots, without any technical helpers, and this with perfect resolution, even for plots with 100-thousend of data points.
 
