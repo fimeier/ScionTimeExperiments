@@ -1,45 +1,50 @@
-## SCION SETTING!!!!!!!!!!!
+## Experiment 12 Setting
+```SCION mode```
 
-## HW/Kernel Timestamps
+```HW/Kernel Timestamps enabled```
 
-## xleave
+```xleave enabled```
 
+## network load
+```network load until 11:15```
 
-## network load (3h)
+```AS1-4: iperf -s -i 10 -t 10800```
 
-Ab 09:15 (UTC 08:15) bis 12:15 (UTC 11:15)
+```AS2: iperf -c AS1 -d -i 10 -t 10800```
 
-iperf -s -i 10 -t 10800
+```AS3: iperf -c AS2 -d -i 10 -t 10800```
 
-iperf -c 10.80.45.241 -d -i 10 -t 10800
-iperf -c 10.80.45.242 -d -i 10 -t 10800
-iperf -c 10.80.45.243 -d -i 10 -t 10800
-
-
+```AS3: iperf -c AS3 -d -i 10 -t 10800```
 
 
 ## Data collection
-On all ASs do the following WHILE chrony is synchronizing time as defined in the Setting below
-* sudo mbgsvcd -f > AS1.txt
-cat AS1.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS1short.txt
-cat AS2.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS2short.txt
-cat AS3.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS3short.txt
-cat AS4.txt | tr -s ' ' | tr ' ' '#' | cut -f2,3,6 -d'#' | tr '#,' ' ' > AS4short.txt
+While chrony was running, the data has been collected with
+```sudo mbgsvcd -f```,i.e., each system uses its GNSS receiver to measure the clock skew. [mbgsvcd()](https://kb.meinbergglobal.com/kb/driver_software/command_line_tools_mbgtools#mbgsvcd) is the Meinberg Service Daemon, implementing the Shared Memory Driver (SHM).
 
-## Setting
-SHM(AS1,Meinberg) <- AS2 <- AS3 <- AS4
+The GNSS receiver is a [Meinberg GNS181PEX](https://www.meinbergglobal.com/english/products/pci-express-gps-glonass-galileo-beidou-clock.htm) configured to use GPS + Galileo + GLONASS as source.
 
-Remark:
-AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)
+## Topology
 
-AS1-3: cycles counter 2900000000
-AS4 :  cycles counter 3502655000
+```SHM(AS1,Meinberg) <- AS2 <- AS3 <- AS4```
 
+Remarks:
 
-## Kommentare
-Sollte es ev länger laufen lassen, so dass es konvergieren kann.
+```AS1,2,3 are ETH's PCs, AS4 is mine (older core i7 second generation = 6(?)years old..)```
+
+```AS1-3: cycles counter 2900000000```
+
+```AS4 :  cycles counter 3502655000```
 
 
+## Example Plots
+```Click on the plots below, or download them. You have to view them in raw mode.```
 
-## Conclusion
+```Hint: You can zoom and scroll```
+
+
+
+![Alt text](Experiment12.svg?raw=true "Complete Experiment")
+
+![Alt text](Experiment12PartSwing.svg?raw=true "Part Swing")
+
 
